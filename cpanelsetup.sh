@@ -2,6 +2,9 @@
 
 #Assumes a fresh instance of cloudlinux and logged in as root. Make sure you have your CloudLinux license key handy.
 
+#Update the system
+yum -y update
+
 #License Cloudlinux
 echo ""
 echo ""
@@ -10,6 +13,9 @@ echo ""
 echo ""
 rhnreg_ks --activationkey=$key &&
 clnreg_ks --force &&
+
+#Update again
+yum -y update &&
 
 #Install cPanel
 cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest &&
