@@ -1,6 +1,10 @@
 #!/bin/bash
 
-#Assumes a fresh instance of cloudlinux and logged in as root
+#Assumes a fresh instance of cloudlinux and logged in as root. Make sure you have your CloudLinux license key handy.
+
+#License Cloudlinux
+#rhnreg_ks --activationkey=<newkey>
+#clnreg_ks --force
 
 #Install cPanel
 cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest &&
