@@ -3,8 +3,13 @@
 #Assumes a fresh instance of cloudlinux and logged in as root. Make sure you have your CloudLinux license key handy.
 
 #License Cloudlinux
-#rhnreg_ks --activationkey=<newkey>
-#clnreg_ks --force
+echo ""
+echo ""
+read -p 'Please paste your Cloudlinux license here and press enter:   ' key
+echo ""
+echo ""
+rhnreg_ks --activationkey=$key &&
+clnreg_ks --force &&
 
 #Install cPanel
 cd /home && curl -o latest -L https://securedownloads.cpanel.net/latest && sh latest &&
@@ -20,6 +25,11 @@ mkdir /root/softaculous && cd /root/softaculous && wget -N https://files.softacu
 
 #Install LVEManager
 yum -y install lvemanager &&
+
+#Install CageFS
+yum -y install cagefs &&
+
+#Initialise CageFS
 
 #Install ConfigServer Security & Firewall
 wget http://download.configserver.com/csf.tgz && tar -xzf csf.tgz && sh install.sh
