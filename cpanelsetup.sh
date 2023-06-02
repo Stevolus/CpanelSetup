@@ -62,4 +62,4 @@ sleep 2
 #Install ConfigServer Security & Firewall
 echo "Install ConfigServer Security & Firewall..."
 sleep 2
-wget http://download.configserver.com/csf.tgz && tar -xzf csf.tgz && sh install.sh
+wget http://download.configserver.com/csf.tgz && tar -xzf csf.tgz && cd csf && sh install.sh
