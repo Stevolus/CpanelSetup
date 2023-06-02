@@ -43,7 +43,7 @@ yum -y install ea-php81-php-ioncube12.x86_64 &&
 #Install Softalicious
 sleep 2
 echo "Installing Softaculous..."
-mkdir /root/softaculous && cd /root/softaculous && wget -N https://files.softaculous.com/install.sh && chmod 755 install.sh && ./install.sh &&
+mkdir /root/softaculous && cd /root/softaculous && wget -N https://files.softaculous.com/install.sh && chmod +x install.sh && ./install.sh &&
 
 #Install LVEManager
 echo "Installing LVEManager..."
