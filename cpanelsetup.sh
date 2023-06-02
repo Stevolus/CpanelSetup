@@ -9,11 +9,12 @@ yum -y update &&
 #License Cloudlinux
 echo ""
 echo ""
-read -p 'Please paste your Cloudlinux license here and press enter:   ' key
+read -p 'Please paste your Cloudlinux license key and press enter:   ' cloudkey
+read -p 'Please paste your Imunify360 license key and press enter:   ' imunekey
 echo ""
 echo ""
 echo "One moment..."
-rhnreg_ks --activationkey=$key &&
+rhnreg_ks --activationkey=$cloudkey &&
 clnreg_ks --force &&
 echo ""
 echo "Cloudlinux licensed successfully."
