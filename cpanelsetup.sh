@@ -47,7 +47,7 @@ mkdir /root/softaculous && cd /root/softaculous && wget -N https://files.softacu
 #Install LVEManager
 echo "Installing LVEManager..."
 sleep 2
-yum -y install lvemanager &&
+yum -y install lvemanager && systemctl start lvemanager.service &&
 
 #Install CageFS
 echo "Installing CageFS..."
