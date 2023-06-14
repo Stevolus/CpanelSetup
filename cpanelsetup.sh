@@ -48,7 +48,7 @@ mkdir /root/softaculous && cd /root/softaculous && wget -N https://files.softacu
 #Install LVEManager
 echo "Installing LVEManager..."
 sleep 2
-yum -y install lvemanager && systemctl start lvemanager.service &&
+yum install yum install python3-aiohttp-jinja2 && yum -y install lvemanager && systemctl start lvemanager.service &&
 
 #Install CageFS
 echo "Installing CageFS..."
