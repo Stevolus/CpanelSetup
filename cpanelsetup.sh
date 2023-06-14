@@ -53,6 +53,8 @@ yum -y install lvemanager && systemctl start lvemanager.service &&
 #Install CageFS
 echo "Installing CageFS..."
 sleep 2
+yum install cagefs --enablerepo=cloudlinux-updates-testing &&
+yum update &&
 yum -y install cagefs &&
 
 #Initialise CageFS
